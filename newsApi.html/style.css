@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center ; */
+    padding: 10px 10px;
+    background-color: #2d4c50;
+    height: 75px;
+    overflow: hidden;
+    
+}
+.searchBox{
+    border-radius: 8px;
+    width: 300px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    padding: 8px;
+    
+}
+#btn{
+    height: 20px;
+    background-color: #138065;
+    margin-left: 5px;
+}
+
+.SearchContainer li {
+    text-decoration: none;
+    list-style: none;
+    height: 50px;
+}
+
+
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+/* blog section */
+.blogCard{
+    border: 2px solid transparent;
+    margin: 5px;
+    width: 310px;
+    border-radius: 7px;
+    text-align: center;
+    padding: 15px 15px;
+cursor: pointer;
+    
+    
+}
+#blogContainer{
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: repeat(4,340px);
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+    margin: 100px;
+/* align-items: center; */
+
+}
+
+.blogCard img{
+    width: 95%;
+height: 280px;
+border-radius: 20px;
+}
+.blogCard:hover{
+    box-shadow: 4px 4px 10px grey;
+}
+
+
+@media(max-width:500px){
+    #blogContainer{
+        grid-template-columns: repeat(1,340px);
+        grid-gap: 1rem;
+        justify-content: center;
+    }
+    .searchBox{
+        border-radius: 8px;
+        width: 100px; /* Adjust the width as needed */
+        height: 30px; /* Adjust the height as needed */
+        padding: 8px;
+        
+    }
+    /* .navbar{
+        display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    } */
+}
+@media (min-width: 500px) and (max-width: 800px){
+    #blogContainer{
+        grid-template-columns: repeat(2,260px);
+        grid-gap: 1rem;
+        justify-content: center;
+
+    }
+    .blogCard{
+        border: 2px solid red;
+        margin: 10px;
+        width: 210px;
+        border-radius: 7px;
+        text-align: center;
+         
+    }
+
+}
+@media (min-width: 800px) and (max-width: 1200px){
+.navbar{
+    max-width: 4000px;
+    overflow: hidden;
+   
+
+}
+}
